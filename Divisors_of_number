@@ -1,0 +1,32 @@
+
+
+
+import java.util.*;
+public class Divisors_of_number {
+    public static void main(String[] args) {
+
+        ArrayList<Integer> divisors= new ArrayList<>();
+
+        System.out.println("ENTER A NUMBER : ");
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+
+        for (int i=1;i<=n;i++){
+            if(n%i==0){
+                divisors.add(i);
+            }
+        }
+        
+        for (int d : divisors) {
+           System.out.print(d + " ");
+        }
+
+// Alternate way to print ...
+//         for (int i = 0; i < divisors.size(); i++) {
+//         System.out.print(divisors.get(i) + " ");
+// }
+ 
+
+
+    }
+}
