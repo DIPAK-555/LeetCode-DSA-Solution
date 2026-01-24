@@ -1,0 +1,34 @@
+import java.util.*;
+
+class Replace_dig_with_new_dig {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        long num ;
+        System.out.print("ENTER NUMBER TO CHECK : ");
+        num=sc.nextLong();
+        
+        System.out.print("ENTER WHICH  DIGIT WANT TO CHANGE: ");
+        int dig_wan_to_change=sc.nextInt();
+
+
+         System.out.print("ENTER NUMBER TO CHANGE PLACE AT "+dig_wan_to_change +":");
+        int digit_replace=sc.nextInt();
+
+        ArrayList<Long> arr = new ArrayList<>();
+
+        while (num > 0) {
+            arr.add(num % 10);
+            num =num/ 10;
+        }
+
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i) == dig_wan_to_change) {
+                arr.set(i, (long) digit_replace); //(type casting + wrapper classes)
+            }
+        }
+
+        for (int i = arr.size() - 1; i >= 0; i--) {
+            System.out.print(arr.get(i));
+        }
+    }
+}
